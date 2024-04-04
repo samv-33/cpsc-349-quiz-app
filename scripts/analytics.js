@@ -13,6 +13,7 @@
     const storedTotalQuestions =
       JSON.parse(localStorage.getItem("totalQuestions")) || [];
 
+    // testing to see if it stored properly
     console.log("Stored Quiz Results:", storedResults);
     console.log("Score Quiz Results:", storedScore);
     console.log("Total Quiz Results:", storedTotalQuestions);
