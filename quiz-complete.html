@@ -18,22 +18,11 @@
     <div class="container">
       <h1>Quiz Completed</h1>
       <div class="result">
-        <p id="scoreParagraph">
-          Your score: <span id="score">0</span>/<span id="total">0</span>
-        </p>
+        <p id="scoreParagraph">Your score: <span id="score">0</span>/<span id="total">0</span></p>
         <a href="index.html" class="btn btn-primary">Return to Home</a>
       </div>
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const urlParams = new URLSearchParams(window.location.search);
-        const score = urlParams.get("score");
-        const total = urlParams.get("total");
-
-        document.getElementById("score").textContent = score;
-        document.getElementById("total").textContent = total;
-      });
-    </script>
+    <script src="scripts/quiz-complete.js"></script>
   </body>
 </html>
