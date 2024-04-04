@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+(function () {
   // Function to get query parameters
   function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
@@ -17,5 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Score Quiz Results:", storedScore);
     console.log("Total Quiz Results:", storedTotalQuestions);
   }
-  displayResults();
-});
+
+  document.addEventListener("DOMContentLoaded", function () {
+    displayResults();
+  });
+})();

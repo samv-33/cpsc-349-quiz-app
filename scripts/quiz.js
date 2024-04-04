@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+(function () {
   let userScore = 0;
   let quizResults = [];
   let totalQuestions = 0; // Variable to store total number of questions
@@ -108,4 +108,4 @@ document.addEventListener("DOMContentLoaded", function () {
       displayQuestion(); // Display the first question
     });
   }
-});
+})();
