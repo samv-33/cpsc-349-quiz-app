@@ -1,8 +1,9 @@
 (function () {
-  const urlParams = new URLSearchParams(window.location.search);
-  const score = urlParams.get("score");
-  const total = urlParams.get("total");
+  // Retrieve data from local storage
+  var userScore = localStorage.getItem("userScore");
+  var totalQuestions = localStorage.getItem("totalQuestions");
 
-  document.getElementById("score").textContent = score;
-  document.getElementById("total").textContent = total;
+  // Update HTML elements with the retrieved data
+  document.getElementById("score").innerText = userScore;
+  document.getElementById("total").innerText = totalQuestions;
 })();
