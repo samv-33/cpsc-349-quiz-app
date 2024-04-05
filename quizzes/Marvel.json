@@ -1,0 +1,114 @@
+{
+    "questions": [
+        {
+            "image": null,
+            "question": "How many infinity stones are there?",
+            "options": [
+                "One",
+                "Ten",
+                "One Hundred",
+                "Six"
+            ],
+            "answer": "Six"
+        },
+        {
+            "image": null,
+            "question": "Where is Captain America from?",
+            "options": [
+                "Boston",
+                "Brooklyn",
+                "Shanghai",
+                "Tijuana"
+            ],
+            "answer": "Brooklyn"
+        },
+        {
+            "image": null,
+            "question": "Which is not a field in which Dr. Bruce Banner is an expert?",
+            "options": [
+                "Radiophysics",
+                "Biochemistry",
+                "Nuclear Physics",
+                "Clinical Medicine"
+            ],
+            "answer": "Clinical Medicine"
+        },
+        {
+            "image": null,
+            "question": "Who is Thor's father?",
+            "options": [
+                "Ymir",
+                "Zeus",
+                "Aristotles",
+                "Odin"
+            ],
+            "answer": "Odin"
+        },
+        {
+            "image": "img/Marvel/ironman.jpg",
+            "question": "What is the real name of the superhero Iron Man?",
+            "options": [
+                "Peter Parker",
+                "Steve Rogers",
+                "T'Challa",
+                "Tony Stark"
+            ],
+            "answer": "Tony Stark"
+        },
+        {
+            "image": "img/Marvel/infinity-stones.jpg",
+            "question": "Which of the following is not one of the Infinity Stones?",
+            "options": [
+                "Space Stone",
+                "Time Stone",
+                "Reality Stone",
+                "Heart Stone"
+            ],
+            "answer": "Heart Stone"
+        },
+        {
+            "image": "img/Marvel/spiderman.jpg",
+            "question": "Which villain is the arch-nemesis of Spider-Man?",
+            "options": [
+                "Loki",
+                "Dr. Doom",
+                "Mandarin",
+                "Green Goblin"
+            ],
+            "answer": "Green Goblin"
+        },
+        {
+            "image": "img/Marvel/thor.jpg",
+            "question": "What is the name of Thor's enchanted hammer?",
+            "options": [
+                "Mjolnir",
+                "Gungnir",
+                "Jarnbjorn",
+                "Vaughan"
+            ],
+            "answer": "Mjolnir"
+        },
+        {
+            "image": null,
+            "question": "What is the name of the intergalactic supervillain who seeks to collect all six Infinity Stones?",
+            "options": [
+                "Darkseid",
+                "Eren Yeager",
+                "Galactus",
+                "Thanos"
+            ],
+            "answer": "Thanos"
+        },
+        {
+            "image": "img/Marvel/marvel-women.jpg",
+            "question": "Who is the most powerful female character out of these Marvel characters?",
+            "options": [
+                "Phoenix/Jean Grey",
+                "Captain Marvel",
+                "Invisible Woman",
+                "Scarlet Witch"
+            ],
+            "answer": "Phoenix/Jean Grey"
+        }
+    ]
+}

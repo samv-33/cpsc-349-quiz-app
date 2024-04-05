@@ -1,7 +1,7 @@
 (function () {
   // Retrieve data from local storage
-  let userScore = localStorage.getItem("userScore");
-  let totalQuestions = localStorage.getItem("totalQuestions");
+  let userScore = localStorage.getItem("recentUserScore");
+  let totalQuestions = localStorage.getItem("recentTotalQuestions");
 
   // Update HTML elements with the retrieved data
   document.getElementById("score").innerText = userScore;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz History</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .history-container {
+        margin-top: 20px;
+      }
+      .card + .card {
+        margin-top: 20px; /* Adds spacing between cards */
+      }
+      .correct-answer {
+        background-color: #d4edda; /* Light green background */
+        border-color: #c3e6cb; /* Green border */
+      }
+      .incorrect-answer {
+        background-color: #f8d7da; /* Light red background */
+        border-color: #f5c6cb; /* Red border */
+      }
+      .list-group-item {
+        position: relative; /* Ensure proper stacking of list group items */
+      }
+      .align-items-start {
+        align-items: flex-start !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-auto">
+          <a href="index.html" class="btn btn-primary mb-3">Back to Home</a>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <h1 class="mb-0">Your Quiz History</h1>
+        </div>
+        <div class="col-auto"><!-- Placeholder to balance the grid --></div>
+      </div>
+      <div class="history-container" id="historyContainer">
+        <!-- Results will be injected here -->
+      </div>
+    </div>
+
+    <script src="scripts/history.js"></script>
+  </body>
+</html>

@@ -10,9 +10,9 @@
   }
 
   // Function to load quiz data
-  async function loadQuizData(quizNumber) {
+  async function loadQuizData(quizName) {
     try {
-      const response = await fetch(`quizzes/quiz${quizNumber}.json`);
+      const response = await fetch(`quizzes/${quizName}.json`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -43,8 +43,11 @@
     // Display options
     quizData[currentQuestionIndex].options.forEach((option) => {
       const button = document.createElement("button");
+      button.setAttribute("type", "button");
+      button.classList.add("btn", "btn-primary", "m-2");
+      button.style.padding = "3rem 10rem"; // Set padding directly
+      button.style.fontSize = "1.5rem"; // Set font size directly
       button.textContent = option;
-      button.classList.add("btn", "btn-info", "m-2");
       button.onclick = function () {
         selectOption(option);
       };
@@ -62,10 +65,10 @@
     }
 
     quizResults.push({
-      quizNumber: getQueryParam("quiz"), // Store quiz number
       question: question.question,
       selectedOption: option,
       correctOption: question.answer,
+      correct: option === question.answer,
     });
 
     console.log("Quiz results:", quizResults); // Log the quiz results
@@ -75,16 +78,27 @@
       displayQuestion();
     } else {
       console.log("Quiz finished");
+      let allQuizResults = localStorage.getItem("allQuizResults");
+      allQuizResults = allQuizResults ? JSON.parse(allQuizResults) : [];
+      allQuizResults.push({
+        quiz: getQueryParam("quiz"),
+        questionsAndAnswers: quizResults,
+        score: userScore,
+        totalQuestions: totalQuestions,
+        timestamp: new Date().toISOString(),
+      });
+
       // Save quiz results, user score, and total questions to local storage
-      localStorage.setItem("quizResults", JSON.stringify(quizResults));
-      localStorage.setItem("userScore", userScore);
-      localStorage.setItem("totalQuestions", totalQuestions);
+      localStorage.setItem("recentQuizResults", JSON.stringify(quizResults));
+      localStorage.setItem("allQuizResults", JSON.stringify(allQuizResults));
+      localStorage.setItem("recentUserScore", userScore);
+      localStorage.setItem("recentTotalQuestions", totalQuestions);
       // Redirect to quiz-complete.html with score and total questions as query parameters
-      window.location.href = `quiz-complete.html?score=${userScore}&total=${totalQuestions}`;
+      window.location.href = `quiz-complete.html`;
     }
   }
 
-  document.getElementById("nextButton").addEventListener("click", function () {
+  document.getElementById("skipButton").addEventListener("click", function () {
     if (currentQuestionIndex < quizData.length - 1) {
       currentQuestionIndex++;
       displayQuestion();
@@ -94,15 +108,13 @@
       localStorage.setItem("quizResults", JSON.stringify(quizResults));
       localStorage.setItem("userScore", userScore);
       localStorage.setItem("totalQuestions", totalQuestions);
-      window.location.href = `analytics.html?user=${getQueryParam(
-        "user"
-      )}&quiz=${getQueryParam("quiz")}`;
+      window.location.href = "quiz-complete.html";
     }
   });
 
-  const quizNumber = getQueryParam("quiz");
-  if (quizNumber) {
-    loadQuizData(quizNumber).then((data) => {
+  const quizName = getQueryParam("quiz");
+  if (quizName) {
+    loadQuizData(quizName).then((data) => {
       quizData = data.questions;
       totalQuestions = quizData.length; // Set total number of questions
       displayQuestion(); // Display the first question

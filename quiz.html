@@ -8,6 +8,7 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/quiz.css" />
     <style>
       .question {
         margin-top: 20px;
@@ -18,9 +19,13 @@
     <div class="container">
       <h1 id="quizTitle">Quiz</h1>
       <div id="quizContainer">
-        <div class="question" id="questionText"></div>
-        <div id="options" class="options"></div>
-        <button id="nextButton" class="btn btn-success">Next</button>
+        <div class="questionContainer">
+          <div class="question" id="questionText"></div>
+        </div>
+        <div class="optionsContainer">
+          <div id="options" class="options"></div>
+        </div>
+        <button id="skipButton" class="btn btn-success">skip</button>
       </div>
     </div>
 
