@@ -1,0 +1,169 @@
+{
+    "questions": [
+        {
+            "image": "img/fifa-world-cup.jpg",
+            "question": "Which country won the FIFA World Cup in 2018?",
+            "answers": [
+                "France",
+                "Brazil",
+                "Spain",
+                "Portugal"
+            ],
+            "correctAnswer": "France"
+        },
+        {
+            "image": null,
+            "question": "Who is the leading all-time scorer in NBA history?",
+            "answers": [
+                "Michael Jordan",
+                "Kobe Bryant",
+                "LeBron James",
+                "Kevin Durant"
+            ],
+            "correctAnswer": "LeBron James"
+        },
+        {
+            "image": "img/sports.jpg",
+            "question": "In which sport would you find terms like \"love,\" \"deuce,\" and \"ace\"?",
+            "answers": [
+                "Basketball",
+                "Football",
+                "Tennis",
+                "Golf"
+            ],
+            "correctAnswer": "Tennis"
+        },
+        {
+            "image": "img/superbowl.jpg",
+            "question": "Who won the most recent Super Bowl?",
+            "answers": [
+                "LA Rams",
+                "Seattle Seahawks",
+                "Kansas City Chiefs",
+                "Minnesota Vikings"
+            ],
+            "correctAnswer": "Kansas City Chiefs"
+        },
+        {
+            "image": "img/olympics.jpg",
+            "question": "Which athlete has won the most Olympic gold medals in history?",
+            "answers": [
+                "Michael Phelps",
+                "Usain Bolt",
+                "Simone Biles",
+                "Naomi Osaka"
+            ],
+            "correctAnswer": "Michael Phelps"
+        },
+        {
+            "image": null,
+            "question": "How many players are allowed on the field for each team in baseball?",
+            "answers": [
+                "Nine",
+                "Thirteen",
+                "Ten",
+                "Seven"
+            ],
+            "correctAnswer": "Nine"
+        },
+        {
+            "image": "img/olympics_race.jpg",
+            "question": "Which city hosted the 2016 Summer Olympics?",
+            "answers": [
+                "Rio de Janeiro",
+                "Tokyo",
+                "Los Angeles",
+                "Brisbane"
+            ],
+            "correctAnswer": "Rio de Janeiro"
+        },
+        {
+            "image": "img/olympics_race.jpeg",
+            "question": "Who holds the record for the fastest 100m sprint in history?",
+            "answers": [
+                "Usain Bolt",
+                "Barry Allen",
+                "Michael Norman",
+                "Akani Simbine"
+            ],
+            "correctAnswer": "Usain Bolt"
+        },
+        {
+            "image": "img/boxing.jpg",
+            "question": "Who is the current heavyweight champion to hold the WBC heavyweight title in boxing?",
+            "answers": [
+                "Tyson Fury",
+                "Anthony Joshua",
+                "Oleksandr Usyk",
+                "Francis Ngannou"
+            ],
+            "correctAnswer": "Tyson Fury"
+        },
+        {
+            "image": "img/basketball.jpg",
+            "question": "In which sport would you perform a \"slam dunk\"?",
+            "answers": [
+                "Football",
+                "Cricket",
+                "Soccer",
+                "Basketball"
+            ],
+            "correctAnswer": "Basketball"
+        },
+        {
+            "image": "img/basketball.jpg",
+            "question": "Who is widely regarded as the greatest basketball player of all time in the current year?",
+            "answers": [
+                "Michael Jordan",
+                "LeBron James",
+                "Kobe Bryant",
+                "Magic Johnson"
+            ],
+            "correctAnswer": "LeBron James"
+        },
+        {
+            "image": "img/soccer.jpg",
+            "question": "Which team holds the record for the most FIFA World Cup wins?",
+            "answers": [
+                "Brazil",
+                "Germany",
+                "Italy",
+                "Argentina"
+            ],
+            "correctAnswer": "Brazil"
+        },
+        {
+            "image": "img/tennis.jpg",
+            "question": "Who holds the record for the most Grand Slam Men's singles titles in tennis history?",
+            "answers": [
+                "Roger Federer",
+                "Rafael Nadal",
+                "Novak Djokovic",
+                "Rod Laver"
+            ],
+            "correctAnswer": "Novak Djokovic"
+        },
+        {
+            "image": "img/soccer.jpg",
+            "question": "Which country has won the most UEFA European Championship titles?",
+            "answers": [
+                "Germany",
+                "Spain",
+                "France",
+                "Italy"
+            ],
+            "correctAnswer": "Germany"
+        },
+        {
+            "image": "img/golf.jpg",
+            "question": "Who currently holds the record for the most major championships won in men's golf?",
+            "answers": [
+                "Tiger Woods",
+                "Jack Nicklaus",
+                "Rory McIlroy",
+                "Phil Mickelson"
+            ],
+            "correctAnswer": "Jack Nicklaus"
+        }
+    ]
+}

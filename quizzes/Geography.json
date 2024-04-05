@@ -1,0 +1,114 @@
+{
+    "questions": [
+        {
+            "image": "img/globe.jpg",
+            "question": "How many continents are there?",
+            "answers": [
+                "One",
+                "Seven",
+                "Nine",
+                "Six"
+            ],
+            "correctAnswer": "Seven"
+        },
+        {
+            "image": "img/asia-map.jpg",
+            "question": "What is the capital of Taiwan?",
+            "answers": [
+                "Taipei",
+                "Tokyo",
+                "Jakarta",
+                "Hanoi"
+            ],
+            "correctAnswer": "Taipei"
+        },
+        {
+            "image": "img/country.jpg",
+            "question": "Which is not a country?",
+            "answers": [
+                "Japan",
+                "India",
+                "Papua New Guinea",
+                "Groana"
+            ],
+            "correctAnswer": "Groana"
+        },
+        {
+            "image": "img/large-land.jpg",
+            "question": "What is the largest state in the US?",
+            "answers": [
+                "Texas",
+                "Alaska",
+                "California",
+                "Florida"
+            ],
+            "correctAnswer": "Alaska"
+        },
+        {
+            "image": "img/coastline.jpg",
+            "question": "Which country has the largest coastline?",
+            "answers": [
+                "Canada",
+                "United States",
+                "Mexico",
+                "Brazil"
+            ],
+            "correctAnswer": "Canada"
+        },
+        {
+            "image": "img/vietnam.jpg",
+            "question": "What is the former name of Ho Chi Minh City?",
+            "answers": [
+                "Saigon",
+                "Hanoi",
+                "Vue Tau",
+                "Da Lat"
+            ],
+            "correctAnswer": "Saigon"
+        },
+        {
+            "image": "img/lake-ladoga.jpg",
+            "question": "Which country is Lake Ladoga from?",
+            "answers": [
+                "Mexico",
+                "Pakistan",
+                "Bangladesh",
+                "Russia"
+            ],
+            "correctAnswer": "Russia"
+        },
+        {
+            "image": "img/mountains.jpg",
+            "question": "Which chain of mountains would you find between Asia and Europe?",
+            "answers": [
+                "The Urals",
+                "The Alps",
+                "The Himalayas",
+                "The Appalachians"
+            ],
+            "correctAnswer": "The Urals"
+        },
+        {
+            "image": "img/small-city.jpg",
+            "question": "Which city is the smallest in the world?",
+            "answers": [
+                "London",
+                "Vatican City",
+                "Adamstown",
+                "Tijuana"
+            ],
+            "correctAnswer": "Vatican City"
+        },
+        {
+            "image": "img/mount-fuji.jpg",
+            "question": "Where is Mt. Fuji located?",
+            "answers": [
+                "Laos",
+                "Bangladesh",
+                "Nigeria",
+                "Japan"
+            ],
+            "correctAnswer": "Japan"
+        }
+    ]
+}

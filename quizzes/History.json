@@ -1,0 +1,169 @@
+{
+    "questions": [
+        {
+            "image": "img/declaration-of-indep.jpg",
+            "question": "What year was the Declaration of Independence adopted?",
+            "answers": [
+                "1976",
+                "1883",
+                "1737",
+                "1776"
+            ],
+            "correctAnswer": "1776"
+        },
+        {
+            "image": "img/war.jpg",
+            "question": "Which country was not one of the Allies during World War II?",
+            "answers": [
+                "US",
+                "Britain",
+                "Soviet Union",
+                "Italy"
+            ],
+            "correctAnswer": "Italy"
+        },
+        {
+            "image": "img/alaska.jpg",
+            "question": "The United States brought Alaska from which country?",
+            "answers": [
+                "Japan",
+                "Afghanistan",
+                "Germany",
+                "Russia"
+            ],
+            "correctAnswer": "Russia"
+        },
+        {
+            "image": "img/founding-fathers.jpg",
+            "question": "Who was the fourth president of the United States?",
+            "answers": [
+                "Samuel Adams",
+                "John Adams",
+                "Thomas Jefferson",
+                "James Madison"
+            ],
+            "correctAnswer": "James Madison"
+        },
+        {
+            "image": "img/industrial-era.jpg",
+            "question": "Which era marked a switch from agricultural practices to industrial practices?",
+            "answers": [
+                "The Renaissance Era",
+                "The Industrial Revolution",
+                "The Abolitionist Movement",
+                "The Modern Era"
+            ],
+            "correctAnswer": "The Industrial Revolution"
+        },
+        {
+            "image": "img/millionaire.jpg",
+            "question": "Who was the first woman to make a million dollars in the United States?",
+            "answers": [
+                "Amanda Waller",
+                "Jane Doe",
+                "Britney Spears",
+                "Madam C.J. Walker"
+            ],
+            "correctAnswer": "Madam C.J. Walker"
+        },
+        {
+            "image": "img/martin-luther-king.jpg",
+            "question": "Where was Martin Luther King, Jr. born?",
+            "answers": [
+                "Atlanta, Georgia",
+                "Taipei, Taiwan",
+                "Boston, Massachusetts",
+                "Queens, New York"
+            ],
+            "correctAnswer": "Atlanta, Georgia"
+        },
+        {
+            "image": "img/starry-night.jpg",
+            "question": "Who painted the famous artwork \"Starry Night\"?",
+            "answers": [
+                "Vincent Van Gogh",
+                "Leonardo Da Vinci",
+                "Michaelangelo",
+                "Pablo Picasso"
+            ],
+            "correctAnswer": "Vincent Van Gogh"
+        },
+        {
+            "image": "img/cuban-missile.jpg",
+            "question": "Who was the president during the Cuban Missile Crisis?",
+            "answers": [
+                "John F. Kennedy",
+                "Barack Obama",
+                "Theodore Roosevelt",
+                "Bill Clinton"
+            ],
+            "correctAnswer": "John F. Kennedy"
+        },
+        {
+            "image": "img/christopher-columbus.jpg",
+            "question": "Who sent Christopher Columbus to explore the New World?",
+            "answers": [
+                "King Ferdinand of Spain",
+                "Queen Elizabeth I",
+                "King Henry VIII",
+                "King Philip I"
+            ],
+            "correctAnswer": "King Ferdinand of Spain"
+        },
+        {
+            "image": "img/empire-map.jpg",
+            "question": "What is considered the largest empire in history?",
+            "answers": [
+                "The British Empire",
+                "The Mongol Empire",
+                "The Russian Empire",
+                "The Qing Dynasty"
+            ],
+            "correctAnswer": "The British Empire"
+        },
+        {
+            "image": "img/celtic-cross.jpg",
+            "question": "How many Celtic languages are spoken today?",
+            "answers": [
+                "One",
+                "Five",
+                "Six",
+                "Thirteen"
+            ],
+            "correctAnswer": "Six"
+        },
+        {
+            "image": "img/albert-einstein.jpg",
+            "question": "Where did Albert Einstein live before moving to the United States?",
+            "answers": [
+                "Egypt",
+                "Ghana",
+                "Romania",
+                "Germany"
+            ],
+            "correctAnswer": "Germany"
+        },
+        {
+            "image": "img/wartime.jpg",
+            "question": "During which war was a Christmas Truce called?",
+            "answers": [
+                "World War I",
+                "Vietnam War",
+                "Civil War",
+                "World War Z"
+            ],
+            "correctAnswer": "World War I"
+        },
+        {
+            "image": "img/civilization.jpg",
+            "question": "What is the world's oldest recorded civilization?",
+            "answers": [
+                "Ancient Greek",
+                "Ancient China",
+                "Indus Valley",
+                "Mesopotamia"
+            ],
+            "correctAnswer": "Mesopotamia"
+        }
+    ]
+}
