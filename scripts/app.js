@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+(function () {
     document.querySelectorAll('.quiz-btn').forEach(button => {
         button.addEventListener('click', function() {
             const quizName = this.getAttribute('data-quiz');
@@ -6,4 +6,4 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = quizName + '.html';
         });
     });
-});
+})();
