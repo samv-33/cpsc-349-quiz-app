@@ -1,7 +1,7 @@
 {
     "questions": [
         {
-            "image": "img/declaration-of-indep.jpg",
+            "image": "img/History/declaration-of-indep.jpg",
             "question": "What year was the Declaration of Independence adopted?",
             "answers": [
                 "1976",
@@ -12,7 +12,7 @@
             "correctAnswer": "1776"
         },
         {
-            "image": "img/war.jpg",
+            "image": "img/History/war.jpg",
             "question": "Which country was not one of the Allies during World War II?",
             "answers": [
                 "US",
@@ -23,7 +23,7 @@
             "correctAnswer": "Italy"
         },
         {
-            "image": "img/alaska.jpg",
+            "image": "img/History/alaska.jpg",
             "question": "The United States brought Alaska from which country?",
             "answers": [
                 "Japan",
@@ -34,7 +34,7 @@
             "correctAnswer": "Russia"
         },
         {
-            "image": "img/founding-fathers.jpg",
+            "image": "img/History/founding-fathers.jpg",
             "question": "Who was the fourth president of the United States?",
             "answers": [
                 "Samuel Adams",
@@ -45,7 +45,7 @@
             "correctAnswer": "James Madison"
         },
         {
-            "image": "img/industrial-era.jpg",
+            "image": "img/History/industrial-era.jpg",
             "question": "Which era marked a switch from agricultural practices to industrial practices?",
             "answers": [
                 "The Renaissance Era",
@@ -56,7 +56,7 @@
             "correctAnswer": "The Industrial Revolution"
         },
         {
-            "image": "img/millionaire.jpg",
+            "image": "img/History/millionaire.jpg",
             "question": "Who was the first woman to make a million dollars in the United States?",
             "answers": [
                 "Amanda Waller",
@@ -67,7 +67,7 @@
             "correctAnswer": "Madam C.J. Walker"
         },
         {
-            "image": "img/martin-luther-king.jpg",
+            "image": "img/History/martin-luther-king.jpg",
             "question": "Where was Martin Luther King, Jr. born?",
             "answers": [
                 "Atlanta, Georgia",
@@ -78,7 +78,7 @@
             "correctAnswer": "Atlanta, Georgia"
         },
         {
-            "image": "img/starry-night.jpg",
+            "image": "img/History/starry-night.jpg",
             "question": "Who painted the famous artwork \"Starry Night\"?",
             "answers": [
                 "Vincent Van Gogh",
@@ -89,7 +89,7 @@
             "correctAnswer": "Vincent Van Gogh"
         },
         {
-            "image": "img/cuban-missile.jpg",
+            "image": "img/History/cuban-missile.jpg",
             "question": "Who was the president during the Cuban Missile Crisis?",
             "answers": [
                 "John F. Kennedy",
@@ -100,7 +100,7 @@
             "correctAnswer": "John F. Kennedy"
         },
         {
-            "image": "img/christopher-columbus.jpg",
+            "image": "img/History/christopher-columbus.jpg",
             "question": "Who sent Christopher Columbus to explore the New World?",
             "answers": [
                 "King Ferdinand of Spain",
@@ -111,7 +111,7 @@
             "correctAnswer": "King Ferdinand of Spain"
         },
         {
-            "image": "img/empire-map.jpg",
+            "image": "img/History/empire-map.jpg",
             "question": "What is considered the largest empire in history?",
             "answers": [
                 "The British Empire",
@@ -122,7 +122,7 @@
             "correctAnswer": "The British Empire"
         },
         {
-            "image": "img/celtic-cross.jpg",
+            "image": "img/History/celtic-cross.jpg",
             "question": "How many Celtic languages are spoken today?",
             "answers": [
                 "One",
@@ -133,7 +133,7 @@
             "correctAnswer": "Six"
         },
         {
-            "image": "img/albert-einstein.jpg",
+            "image": "img/History/albert-einstein.jpg",
             "question": "Where did Albert Einstein live before moving to the United States?",
             "answers": [
                 "Egypt",
@@ -144,7 +144,7 @@
             "correctAnswer": "Germany"
         },
         {
-            "image": "img/wartime.jpg",
+            "image": "img/History/wartime.jpg",
             "question": "During which war was a Christmas Truce called?",
             "answers": [
                 "World War I",
@@ -155,7 +155,7 @@
             "correctAnswer": "World War I"
         },
         {
-            "image": "img/civilization.jpg",
+            "image": "img/History/civilization.jpg",
             "question": "What is the world's oldest recorded civilization?",
             "answers": [
                 "Ancient Greek",

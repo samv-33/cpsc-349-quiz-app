@@ -1,7 +1,7 @@
 {
     "questions": [
         {
-            "image": "img/globe.jpg",
+            "image": "img/Geography/globe.jpg",
             "question": "How many continents are there?",
             "answers": [
                 "One",
@@ -12,7 +12,7 @@
             "correctAnswer": "Seven"
         },
         {
-            "image": "img/asia-map.jpg",
+            "image": "img/Geography/asia-map.jpg",
             "question": "What is the capital of Taiwan?",
             "answers": [
                 "Taipei",
@@ -23,7 +23,7 @@
             "correctAnswer": "Taipei"
         },
         {
-            "image": "img/country.jpg",
+            "image": "img/Geography/country.jpg",
             "question": "Which is not a country?",
             "answers": [
                 "Japan",
@@ -34,7 +34,7 @@
             "correctAnswer": "Groana"
         },
         {
-            "image": "img/large-land.jpg",
+            "image": "img/Geography/large-land.jpg",
             "question": "What is the largest state in the US?",
             "answers": [
                 "Texas",
@@ -45,7 +45,7 @@
             "correctAnswer": "Alaska"
         },
         {
-            "image": "img/coastline.jpg",
+            "image": "img/Geography/coastline.jpg",
             "question": "Which country has the largest coastline?",
             "answers": [
                 "Canada",
@@ -56,7 +56,7 @@
             "correctAnswer": "Canada"
         },
         {
-            "image": "img/vietnam.jpg",
+            "image": "img/Geography/vietnam.jpg",
             "question": "What is the former name of Ho Chi Minh City?",
             "answers": [
                 "Saigon",
@@ -67,7 +67,7 @@
             "correctAnswer": "Saigon"
         },
         {
-            "image": "img/lake-ladoga.jpg",
+            "image": "img/Geography/lake-ladoga.jpg",
             "question": "Which country is Lake Ladoga from?",
             "answers": [
                 "Mexico",
@@ -78,7 +78,7 @@
             "correctAnswer": "Russia"
         },
         {
-            "image": "img/mountains.jpg",
+            "image": "img/Geography/mountains.jpg",
             "question": "Which chain of mountains would you find between Asia and Europe?",
             "answers": [
                 "The Urals",
@@ -89,7 +89,7 @@
             "correctAnswer": "The Urals"
         },
         {
-            "image": "img/small-city.jpg",
+            "image": "img/Geography/small-city.jpg",
             "question": "Which city is the smallest in the world?",
             "answers": [
                 "London",
@@ -100,7 +100,7 @@
             "correctAnswer": "Vatican City"
         },
         {
-            "image": "img/mount-fuji.jpg",
+            "image": "img/Geography/mount-fuji.jpg",
             "question": "Where is Mt. Fuji located?",
             "answers": [
                 "Laos",

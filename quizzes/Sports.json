@@ -1,7 +1,7 @@
 {
     "questions": [
         {
-            "image": "img/fifa-world-cup.jpg",
+            "image": "img/Sports/fifa-world-cup.jpg",
             "question": "Which country won the FIFA World Cup in 2018?",
             "answers": [
                 "France",
@@ -23,7 +23,7 @@
             "correctAnswer": "LeBron James"
         },
         {
-            "image": "img/sports.jpg",
+            "image": "img/Sports/sports.jpg",
             "question": "In which sport would you find terms like \"love,\" \"deuce,\" and \"ace\"?",
             "answers": [
                 "Basketball",
@@ -34,7 +34,7 @@
             "correctAnswer": "Tennis"
         },
         {
-            "image": "img/superbowl.jpg",
+            "image": "img/Sports/superbowl.jpg",
             "question": "Who won the most recent Super Bowl?",
             "answers": [
                 "LA Rams",
@@ -45,7 +45,7 @@
             "correctAnswer": "Kansas City Chiefs"
         },
         {
-            "image": "img/olympics.jpg",
+            "image": "img/Sports/olympics.jpg",
             "question": "Which athlete has won the most Olympic gold medals in history?",
             "answers": [
                 "Michael Phelps",
@@ -67,7 +67,7 @@
             "correctAnswer": "Nine"
         },
         {
-            "image": "img/olympics_race.jpg",
+            "image": "img/Sports/olympics_race.jpg",
             "question": "Which city hosted the 2016 Summer Olympics?",
             "answers": [
                 "Rio de Janeiro",
@@ -78,7 +78,7 @@
             "correctAnswer": "Rio de Janeiro"
         },
         {
-            "image": "img/olympics_race.jpeg",
+            "image": "img/Sports/olympics_race.jpeg",
             "question": "Who holds the record for the fastest 100m sprint in history?",
             "answers": [
                 "Usain Bolt",
@@ -89,7 +89,7 @@
             "correctAnswer": "Usain Bolt"
         },
         {
-            "image": "img/boxing.jpg",
+            "image": "img/Sports/boxing.jpg",
             "question": "Who is the current heavyweight champion to hold the WBC heavyweight title in boxing?",
             "answers": [
                 "Tyson Fury",
@@ -100,7 +100,7 @@
             "correctAnswer": "Tyson Fury"
         },
         {
-            "image": "img/basketball.jpg",
+            "image": "img/Sports/basketball.jpg",
             "question": "In which sport would you perform a \"slam dunk\"?",
             "answers": [
                 "Football",
@@ -111,7 +111,7 @@
             "correctAnswer": "Basketball"
         },
         {
-            "image": "img/basketball.jpg",
+            "image": "img/Sports/basketball.jpg",
             "question": "Who is widely regarded as the greatest basketball player of all time in the current year?",
             "answers": [
                 "Michael Jordan",
@@ -122,7 +122,7 @@
             "correctAnswer": "LeBron James"
         },
         {
-            "image": "img/soccer.jpg",
+            "image": "img/Sports/soccer.jpg",
             "question": "Which team holds the record for the most FIFA World Cup wins?",
             "answers": [
                 "Brazil",
@@ -133,7 +133,7 @@
             "correctAnswer": "Brazil"
         },
         {
-            "image": "img/tennis.jpg",
+            "image": "img/Sports/tennis.jpg",
             "question": "Who holds the record for the most Grand Slam Men's singles titles in tennis history?",
             "answers": [
                 "Roger Federer",
@@ -144,7 +144,7 @@
             "correctAnswer": "Novak Djokovic"
         },
         {
-            "image": "img/soccer.jpg",
+            "image": "img/Sports/soccer.jpg",
             "question": "Which country has won the most UEFA European Championship titles?",
             "answers": [
                 "Germany",
@@ -155,7 +155,7 @@
             "correctAnswer": "Germany"
         },
         {
-            "image": "img/golf.jpg",
+            "image": "img/Sports/golf.jpg",
             "question": "Who currently holds the record for the most major championships won in men's golf?",
             "answers": [
                 "Tiger Woods",
