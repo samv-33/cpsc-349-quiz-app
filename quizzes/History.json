@@ -3,167 +3,167 @@
         {
             "image": "img/History/declaration-of-indep.jpg",
             "question": "What year was the Declaration of Independence adopted?",
-            "answers": [
+            "options": [
                 "1976",
                 "1883",
                 "1737",
                 "1776"
             ],
-            "correctAnswer": "1776"
+            "answer": "1776"
         },
         {
             "image": "img/History/war.jpg",
             "question": "Which country was not one of the Allies during World War II?",
-            "answers": [
+            "options": [
                 "US",
                 "Britain",
                 "Soviet Union",
                 "Italy"
             ],
-            "correctAnswer": "Italy"
+            "answer": "Italy"
         },
         {
             "image": "img/History/alaska.jpg",
             "question": "The United States brought Alaska from which country?",
-            "answers": [
+            "options": [
                 "Japan",
                 "Afghanistan",
                 "Germany",
                 "Russia"
             ],
-            "correctAnswer": "Russia"
+            "answer": "Russia"
         },
         {
             "image": "img/History/founding-fathers.jpg",
             "question": "Who was the fourth president of the United States?",
-            "answers": [
+            "options": [
                 "Samuel Adams",
                 "John Adams",
                 "Thomas Jefferson",
                 "James Madison"
             ],
-            "correctAnswer": "James Madison"
+            "answer": "James Madison"
         },
         {
             "image": "img/History/industrial-era.jpg",
             "question": "Which era marked a switch from agricultural practices to industrial practices?",
-            "answers": [
+            "options": [
                 "The Renaissance Era",
                 "The Industrial Revolution",
                 "The Abolitionist Movement",
                 "The Modern Era"
             ],
-            "correctAnswer": "The Industrial Revolution"
+            "answer": "The Industrial Revolution"
         },
         {
             "image": "img/History/millionaire.jpg",
             "question": "Who was the first woman to make a million dollars in the United States?",
-            "answers": [
+            "options": [
                 "Amanda Waller",
                 "Jane Doe",
                 "Britney Spears",
                 "Madam C.J. Walker"
             ],
-            "correctAnswer": "Madam C.J. Walker"
+            "answer": "Madam C.J. Walker"
         },
         {
             "image": "img/History/martin-luther-king.jpg",
             "question": "Where was Martin Luther King, Jr. born?",
-            "answers": [
+            "options": [
                 "Atlanta, Georgia",
                 "Taipei, Taiwan",
                 "Boston, Massachusetts",
                 "Queens, New York"
             ],
-            "correctAnswer": "Atlanta, Georgia"
+            "answer": "Atlanta, Georgia"
         },
         {
             "image": "img/History/starry-night.jpg",
             "question": "Who painted the famous artwork \"Starry Night\"?",
-            "answers": [
+            "options": [
                 "Vincent Van Gogh",
                 "Leonardo Da Vinci",
                 "Michaelangelo",
                 "Pablo Picasso"
             ],
-            "correctAnswer": "Vincent Van Gogh"
+            "answer": "Vincent Van Gogh"
         },
         {
             "image": "img/History/cuban-missile.jpg",
             "question": "Who was the president during the Cuban Missile Crisis?",
-            "answers": [
+            "options": [
                 "John F. Kennedy",
                 "Barack Obama",
                 "Theodore Roosevelt",
                 "Bill Clinton"
             ],
-            "correctAnswer": "John F. Kennedy"
+            "answer": "John F. Kennedy"
         },
         {
             "image": "img/History/christopher-columbus.jpg",
             "question": "Who sent Christopher Columbus to explore the New World?",
-            "answers": [
+            "options": [
                 "King Ferdinand of Spain",
                 "Queen Elizabeth I",
                 "King Henry VIII",
                 "King Philip I"
             ],
-            "correctAnswer": "King Ferdinand of Spain"
+            "answer": "King Ferdinand of Spain"
         },
         {
             "image": "img/History/empire-map.jpg",
             "question": "What is considered the largest empire in history?",
-            "answers": [
+            "options": [
                 "The British Empire",
                 "The Mongol Empire",
                 "The Russian Empire",
                 "The Qing Dynasty"
             ],
-            "correctAnswer": "The British Empire"
+            "answer": "The British Empire"
         },
         {
             "image": "img/History/celtic-cross.jpg",
             "question": "How many Celtic languages are spoken today?",
-            "answers": [
+            "options": [
                 "One",
                 "Five",
                 "Six",
                 "Thirteen"
             ],
-            "correctAnswer": "Six"
+            "answer": "Six"
         },
         {
             "image": "img/History/albert-einstein.jpg",
             "question": "Where did Albert Einstein live before moving to the United States?",
-            "answers": [
+            "options": [
                 "Egypt",
                 "Ghana",
                 "Romania",
                 "Germany"
             ],
-            "correctAnswer": "Germany"
+            "answer": "Germany"
         },
         {
             "image": "img/History/wartime.jpg",
             "question": "During which war was a Christmas Truce called?",
-            "answers": [
+            "options": [
                 "World War I",
                 "Vietnam War",
                 "Civil War",
                 "World War Z"
             ],
-            "correctAnswer": "World War I"
+            "answer": "World War I"
         },
         {
             "image": "img/History/civilization.jpg",
             "question": "What is the world's oldest recorded civilization?",
-            "answers": [
+            "options": [
                 "Ancient Greek",
                 "Ancient China",
                 "Indus Valley",
                 "Mesopotamia"
             ],
-            "correctAnswer": "Mesopotamia"
+            "answer": "Mesopotamia"
         }
     ]
 }

@@ -3,167 +3,167 @@
         {
             "image": "img/Sports/fifa-world-cup.jpg",
             "question": "Which country won the FIFA World Cup in 2018?",
-            "answers": [
+            "options": [
                 "France",
                 "Brazil",
                 "Spain",
                 "Portugal"
             ],
-            "correctAnswer": "France"
+            "answer": "France"
         },
         {
             "image": null,
             "question": "Who is the leading all-time scorer in NBA history?",
-            "answers": [
+            "options": [
                 "Michael Jordan",
                 "Kobe Bryant",
                 "LeBron James",
                 "Kevin Durant"
             ],
-            "correctAnswer": "LeBron James"
+            "answer": "LeBron James"
         },
         {
             "image": "img/Sports/sports.jpg",
             "question": "In which sport would you find terms like \"love,\" \"deuce,\" and \"ace\"?",
-            "answers": [
+            "options": [
                 "Basketball",
                 "Football",
                 "Tennis",
                 "Golf"
             ],
-            "correctAnswer": "Tennis"
+            "answer": "Tennis"
         },
         {
             "image": "img/Sports/superbowl.jpg",
             "question": "Who won the most recent Super Bowl?",
-            "answers": [
+            "options": [
                 "LA Rams",
                 "Seattle Seahawks",
                 "Kansas City Chiefs",
                 "Minnesota Vikings"
             ],
-            "correctAnswer": "Kansas City Chiefs"
+            "answer": "Kansas City Chiefs"
         },
         {
             "image": "img/Sports/olympics.jpg",
             "question": "Which athlete has won the most Olympic gold medals in history?",
-            "answers": [
+            "options": [
                 "Michael Phelps",
                 "Usain Bolt",
                 "Simone Biles",
                 "Naomi Osaka"
             ],
-            "correctAnswer": "Michael Phelps"
+            "answer": "Michael Phelps"
         },
         {
             "image": null,
             "question": "How many players are allowed on the field for each team in baseball?",
-            "answers": [
+            "options": [
                 "Nine",
                 "Thirteen",
                 "Ten",
                 "Seven"
             ],
-            "correctAnswer": "Nine"
+            "answer": "Nine"
         },
         {
             "image": "img/Sports/olympics_race.jpg",
             "question": "Which city hosted the 2016 Summer Olympics?",
-            "answers": [
+            "options": [
                 "Rio de Janeiro",
                 "Tokyo",
                 "Los Angeles",
                 "Brisbane"
             ],
-            "correctAnswer": "Rio de Janeiro"
+            "answer": "Rio de Janeiro"
         },
         {
             "image": "img/Sports/olympics_race.jpeg",
             "question": "Who holds the record for the fastest 100m sprint in history?",
-            "answers": [
+            "options": [
                 "Usain Bolt",
                 "Barry Allen",
                 "Michael Norman",
                 "Akani Simbine"
             ],
-            "correctAnswer": "Usain Bolt"
+            "answer": "Usain Bolt"
         },
         {
             "image": "img/Sports/boxing.jpg",
             "question": "Who is the current heavyweight champion to hold the WBC heavyweight title in boxing?",
-            "answers": [
+            "options": [
                 "Tyson Fury",
                 "Anthony Joshua",
                 "Oleksandr Usyk",
                 "Francis Ngannou"
             ],
-            "correctAnswer": "Tyson Fury"
+            "answer": "Tyson Fury"
         },
         {
             "image": "img/Sports/basketball.jpg",
             "question": "In which sport would you perform a \"slam dunk\"?",
-            "answers": [
+            "options": [
                 "Football",
                 "Cricket",
                 "Soccer",
                 "Basketball"
             ],
-            "correctAnswer": "Basketball"
+            "answer": "Basketball"
         },
         {
             "image": "img/Sports/basketball.jpg",
             "question": "Who is widely regarded as the greatest basketball player of all time in the current year?",
-            "answers": [
+            "options": [
                 "Michael Jordan",
                 "LeBron James",
                 "Kobe Bryant",
                 "Magic Johnson"
             ],
-            "correctAnswer": "LeBron James"
+            "answer": "LeBron James"
         },
         {
             "image": "img/Sports/soccer.jpg",
             "question": "Which team holds the record for the most FIFA World Cup wins?",
-            "answers": [
+            "options": [
                 "Brazil",
                 "Germany",
                 "Italy",
                 "Argentina"
             ],
-            "correctAnswer": "Brazil"
+            "answer": "Brazil"
         },
         {
             "image": "img/Sports/tennis.jpg",
             "question": "Who holds the record for the most Grand Slam Men's singles titles in tennis history?",
-            "answers": [
+            "options": [
                 "Roger Federer",
                 "Rafael Nadal",
                 "Novak Djokovic",
                 "Rod Laver"
             ],
-            "correctAnswer": "Novak Djokovic"
+            "answer": "Novak Djokovic"
         },
         {
             "image": "img/Sports/soccer.jpg",
             "question": "Which country has won the most UEFA European Championship titles?",
-            "answers": [
+            "options": [
                 "Germany",
                 "Spain",
                 "France",
                 "Italy"
             ],
-            "correctAnswer": "Germany"
+            "answer": "Germany"
         },
         {
             "image": "img/Sports/golf.jpg",
             "question": "Who currently holds the record for the most major championships won in men's golf?",
-            "answers": [
+            "options": [
                 "Tiger Woods",
                 "Jack Nicklaus",
                 "Rory McIlroy",
                 "Phil Mickelson"
             ],
-            "correctAnswer": "Jack Nicklaus"
+            "answer": "Jack Nicklaus"
         }
     ]
 }

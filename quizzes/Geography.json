@@ -3,112 +3,112 @@
         {
             "image": "img/Geography/globe.jpg",
             "question": "How many continents are there?",
-            "answers": [
+            "options": [
                 "One",
                 "Seven",
                 "Nine",
                 "Six"
             ],
-            "correctAnswer": "Seven"
+            "answer": "Seven"
         },
         {
             "image": "img/Geography/asia-map.jpg",
             "question": "What is the capital of Taiwan?",
-            "answers": [
+            "options": [
                 "Taipei",
                 "Tokyo",
                 "Jakarta",
                 "Hanoi"
             ],
-            "correctAnswer": "Taipei"
+            "answer": "Taipei"
         },
         {
             "image": "img/Geography/country.jpg",
             "question": "Which is not a country?",
-            "answers": [
+            "options": [
                 "Japan",
                 "India",
                 "Papua New Guinea",
                 "Groana"
             ],
-            "correctAnswer": "Groana"
+            "answer": "Groana"
         },
         {
             "image": "img/Geography/large-land.jpg",
             "question": "What is the largest state in the US?",
-            "answers": [
+            "options": [
                 "Texas",
                 "Alaska",
                 "California",
                 "Florida"
             ],
-            "correctAnswer": "Alaska"
+            "answer": "Alaska"
         },
         {
             "image": "img/Geography/coastline.jpg",
             "question": "Which country has the largest coastline?",
-            "answers": [
+            "options": [
                 "Canada",
                 "United States",
                 "Mexico",
                 "Brazil"
             ],
-            "correctAnswer": "Canada"
+            "answer": "Canada"
         },
         {
             "image": "img/Geography/vietnam.jpg",
             "question": "What is the former name of Ho Chi Minh City?",
-            "answers": [
+            "options": [
                 "Saigon",
                 "Hanoi",
                 "Vue Tau",
                 "Da Lat"
             ],
-            "correctAnswer": "Saigon"
+            "answer": "Saigon"
         },
         {
             "image": "img/Geography/lake-ladoga.jpg",
             "question": "Which country is Lake Ladoga from?",
-            "answers": [
+            "options": [
                 "Mexico",
                 "Pakistan",
                 "Bangladesh",
                 "Russia"
             ],
-            "correctAnswer": "Russia"
+            "answer": "Russia"
         },
         {
             "image": "img/Geography/mountains.jpg",
             "question": "Which chain of mountains would you find between Asia and Europe?",
-            "answers": [
+            "options": [
                 "The Urals",
                 "The Alps",
                 "The Himalayas",
                 "The Appalachians"
             ],
-            "correctAnswer": "The Urals"
+            "answer": "The Urals"
         },
         {
             "image": "img/Geography/small-city.jpg",
             "question": "Which city is the smallest in the world?",
-            "answers": [
+            "options": [
                 "London",
                 "Vatican City",
                 "Adamstown",
                 "Tijuana"
             ],
-            "correctAnswer": "Vatican City"
+            "answer": "Vatican City"
         },
         {
             "image": "img/Geography/mount-fuji.jpg",
             "question": "Where is Mt. Fuji located?",
-            "answers": [
+            "options": [
                 "Laos",
                 "Bangladesh",
                 "Nigeria",
                 "Japan"
             ],
-            "correctAnswer": "Japan"
+            "answer": "Japan"
         }
     ]
 }
