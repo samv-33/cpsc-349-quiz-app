@@ -4,23 +4,11 @@
   let quizResults = [];
   let currentQuestionIndex = 0;
   let quizData;
-  let counter;
-
-  const quizContainer = document.querySelector(".quizContainer");
-  const timeCount = quizContainer.querySelector(".timer .timerSeconds");
 
   // Function to get query parameter for quiz number
   function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
-  }
-
-  function startTimer(time) {
-    counter = setInterval(timer, 1000);
-    function timer() {
-      timeCount.textContent = time;
-      time--;
-    }
   }
 
   // Function to load quiz data
@@ -34,6 +22,38 @@
     } catch (error) {
       console.error("Could not load quiz data:", error);
     }
+  }
+
+  function displayFeedback() {
+    const feedbackList = document.getElementById("feedbackList");
+    feedbackList.innerHTML = "";
+    quizResults.forEach((result, index) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = `Question ${index + 1}: ${
+        result.correct ? "Correct" : "Incorrect"
+      }`;
+      listItem.style.color = result.correct ? "green" : "red";
+      feedbackList.appendChild(listItem);
+    });
+  }
+
+  function addReviewButtonHandler() {
+    const reviewButton = document.getElementById("reviewButton");
+    reviewButton.addEventListener("click", function () {
+      const feedbackSection = document.getElementById("feedbackSection");
+      feedbackSection.style.display = "block";
+      displayFeedback();
+    });
+  }
+
+  function startTimer(duration, display) {
+    let timer = duration;
+    setInterval(function () {
+      display.textContent = timer;
+      if (--timer < 0) {
+        timer = 0;
+      }
+    }, 1000); // Update every second
   }
 
   function displayQuestion() {
@@ -55,8 +75,6 @@
       imageContainer.appendChild(image);
     }
 
-    startTimer(15);
-
     // Update quiz title and question
     quizTitle.textContent = `Quiz ${getQueryParam("quiz")}`;
     questionText.textContent = quizData[currentQuestionIndex].question;
@@ -73,6 +91,11 @@
       };
       options.appendChild(button);
     });
+
+    const timerDisplay = document.querySelector(".timeSeconds");
+    const duration = 15; // 15 seconds for each question
+
+    startTimer(duration, timerDisplay);
   }
 
   function redirectToQuizComplete() {
@@ -83,7 +106,6 @@
       questionsAndAnswers: quizResults,
       score: userScore,
       totalQuestions: totalQuestions,
-      timestamp: new Date().toISOString(),
     });
 
     // Save quiz results, user score, and total questions to local storage
@@ -164,8 +186,10 @@
   }
 
   function main() {
+    addReviewButtonHandler();
     addSkipButtonHandler();
     addNextButtonHandler();
+
     const quizName = getQueryParam("quiz");
     if (quizName) {
       loadQuizData(quizName).then((data) => {
