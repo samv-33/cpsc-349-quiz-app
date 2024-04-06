@@ -14,6 +14,10 @@ npm install -g browser-sync
 browser-sync start --server --browser "firefox" --files "css/*.css, *.html"
 ```
 
+## Navigation
+
+To navigate the app, you can click on the buttons on the home page to start the quiz or view the quiz history. Once you start the quiz, you can select from the 4 quiz options. Once you complete a quiz it will redirect you to a quiz-complete page where you can see the results of the quiz you just completed. You can view your previous quiz attempts in the quiz history page and see the correct answers there.
+
 ## Authors
 
 Nadeem Maida
