@@ -1,3 +1,7 @@
+body{
+    background-color: hsl(270, 100%, 30%);
+}
+
 .history-container {
     margin-top: 20px;
 }
