@@ -24,28 +24,6 @@
     }
   }
 
-  function displayFeedback() {
-    const feedbackList = document.getElementById("feedbackList");
-    feedbackList.innerHTML = "";
-    quizResults.forEach((result, index) => {
-      const listItem = document.createElement("li");
-      listItem.textContent = `Question ${index + 1}: ${
-        result.correct ? "Correct" : "Incorrect"
-      }`;
-      listItem.style.color = result.correct ? "green" : "red";
-      feedbackList.appendChild(listItem);
-    });
-  }
-
-  function addReviewButtonHandler() {
-    const reviewButton = document.getElementById("reviewButton");
-    reviewButton.addEventListener("click", function () {
-      const feedbackSection = document.getElementById("feedbackSection");
-      feedbackSection.style.display = "block";
-      displayFeedback();
-    });
-  }
-
   function startTimer(duration, display) {
     let timer = duration;
     setInterval(function () {
@@ -186,7 +164,6 @@
   }
 
   function main() {
-    addReviewButtonHandler();
     addSkipButtonHandler();
     addNextButtonHandler();
 
