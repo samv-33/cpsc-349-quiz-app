@@ -4,11 +4,23 @@
   let quizResults = [];
   let currentQuestionIndex = 0;
   let quizData;
+  let counter;
+
+  const quizContainer = document.querySelector(".quizContainer");
+  const timeCount = quizContainer.querySelector(".timer .timerSeconds");
 
   // Function to get query parameter for quiz number
   function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
+  }
+
+  function startTimer(time) {
+    counter = setInterval(timer, 1000);
+    function timer() {
+      timeCount.textContent = time;
+      time--;
+    }
   }
 
   // Function to load quiz data
@@ -33,6 +45,17 @@
     const questionText = document.getElementById("questionText");
     const options = document.getElementById("options");
     const quizTitle = document.getElementById("quizTitle");
+    const imageContainer = document.getElementById("imageContainer");
+
+    imageContainer.innerHTML = "";
+
+    if (quizData[currentQuestionIndex].image) {
+      const image = document.createElement("img");
+      image.src = quizData[currentQuestionIndex].image;
+      imageContainer.appendChild(image);
+    }
+
+    startTimer(15);
 
     // Update quiz title and question
     quizTitle.textContent = `Quiz ${getQueryParam("quiz")}`;
@@ -90,18 +113,34 @@
     }
   }
 
+  let optionSelected = false; // Flag to track if an option has been selected
+
   function selectOption(option) {
     const question = quizData[currentQuestionIndex];
-    correct = false;
+    let correct = false;
+
+    // Check if the selected option is correct
     if (option === question.answer) {
       console.log("Correct!");
-      userScore++; // Increment score if the answer is correct
+      userScore++;
       correct = true;
     } else {
       console.log("Wrong!");
     }
 
-    moveToNextQuestion(question, option, correct);
+    // Highlight the selected option
+    const options = document.getElementById("options");
+    const buttons = options.getElementsByTagName("button");
+    for (let button of buttons) {
+      if (button.textContent === option) {
+        button.style.backgroundColor = correct ? "green" : "red";
+      } else {
+        button.disabled = true; // Disable other options after selecting one
+      }
+    }
+
+    // Set optionSelected flag to true
+    optionSelected = true;
   }
 
   function addSkipButtonHandler() {
@@ -112,9 +151,21 @@
       moveToNextQuestion(question, null, false);
     });
   }
+  function addNextButtonHandler() {
+    const nextButton = document.getElementById("nextButton");
+    nextButton.addEventListener("click", function () {
+      if (optionSelected) {
+        // Move to next question only if an option has been selected
+        const question = quizData[currentQuestionIndex];
+        moveToNextQuestion(question, null, false);
+        optionSelected = false; // Reset optionSelected flag
+      }
+    });
+  }
 
   function main() {
     addSkipButtonHandler();
+    addNextButtonHandler();
     const quizName = getQueryParam("quiz");
     if (quizName) {
       loadQuizData(quizName).then((data) => {

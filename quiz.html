@@ -13,14 +13,25 @@
   <body>
     <div class="container">
       <h1 id="quizTitle">Quiz</h1>
-      <div id="quizContainer">
+      <div class="quizContainer">
+        <div id="imageContainer"></div>
         <div class="questionContainer">
+
           <div class="question" id="questionText"></div>
         </div>
-        <div class="optionsContainer">
-          <div id="options" class="options"></div>
+        <div class="timer">
+          <div class="timeText">Time left: </div>
+          <div class="timeSeconds">15</div>
+          </div>
         </div>
-        <button id="skipButton" class="btn btn-success">skip</button>
+
+        <div class="optionsContainer">
+          <div id="options" class="options">
+          </div>
+          
+        </div>
+        <button id="skipButton" class="btn btn-Primary">skip</button>
+        <button id="nextButton" class="btn btn-Primary">Next</button>
       </div>
     </div>
 
