@@ -22,8 +22,15 @@ body{
   color: #fff;
 }
 
+.quiz-button {
+  padding: 3rem 10rem;
+  font-size: 1.5rem;
+}
+
 #quizTitle{
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color: #fff;
 }
+
+
