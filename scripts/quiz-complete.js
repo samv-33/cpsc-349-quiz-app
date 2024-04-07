@@ -30,7 +30,7 @@
       correctOption.textContent = `Correct answer: ${result.correctOption}`;
 
       // Set color based on correctness
-      question.style.color = result.correct ? "green" : "red";
+      question.style.color = "black";
       selectedOption.style.color = result.correct ? "green" : "red";
       correctOption.style.color = "green"; // Correct answer always in green
 
