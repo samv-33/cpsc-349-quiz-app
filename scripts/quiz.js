@@ -139,6 +139,17 @@
       }
     }
 
+     // If the selected option is wrong, highlight the correct answer in green
+     if (!correct) {
+      for (let button of buttons) {
+          if (button.textContent === question.answer) {
+              button.style.backgroundColor = "green";
+              break; // Break out of the loop once the correct answer is found
+          
+            }
+        }
+    }
+
     // Set optionSelected flag to true
     optionSelected = true;
   }
