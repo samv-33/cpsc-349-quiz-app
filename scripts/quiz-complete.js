@@ -7,17 +7,19 @@
   document.getElementById("score").innerText = userScore;
   document.getElementById("total").innerText = totalQuestions;
 
+  // Parse the quiz results from local storage
   const quizResults = JSON.parse(localStorage.getItem("recentQuizResults"));
   console.log(quizResults);
 
   function displayFeedback(quizResults) {
     const feedbackList = document.getElementById("feedbackList");
     feedbackList.innerHTML = "";
+
     quizResults.forEach((result, index) => {
       const listItem = document.createElement("li");
-      listItem.textContent = `Question ${index + 1}: ${
-        result.correct ? "Correct" : "Incorrect"
-      }`;
+      listItem.textContent = `Question ${index + 1}: 
+        Your answer: ${result.selectedOption || "Not answered"} 
+        | Correct answer: ${result.correctOption}`;
       listItem.style.color = result.correct ? "green" : "red";
       feedbackList.appendChild(listItem);
     });
@@ -27,27 +29,17 @@
     const reviewButton = document.getElementById("reviewButton");
     reviewButton.addEventListener("click", function () {
       const feedbackSection = document.getElementById("feedbackSection");
-      feedbackSection.style.display = "block";
-      displayFeedback();
+      feedbackSection.style.display = "block"; // Ensure the feedback section is visible
+      const quizResults = JSON.parse(localStorage.getItem("recentQuizResults"));
+      const quizData = JSON.parse(localStorage.getItem("quizData")); // Retrieve quiz data
+      displayFeedback(quizResults, quizData); // Pass both quizResults and quizData to displayFeedback
     });
   }
-  // Function to get query parameter for quiz number
-  function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
+  // Call the main function to set up event handlers
+  function main() {
+    addReviewButtonHandler();
   }
 
-  function main() {
-    const quizResults = JSON.parse(localStorage.getItem("recentQuizResults"));
-    addReviewButtonHandler();
-    const quizName = getQueryParam("quiz");
-    if (quizName) {
-      loadQuizData(quizName).then((data) => {
-        const quizData = data.questions;
-        totalQuestions = quizData.length; // Set total number of questions
-        displayQuestion(); // Display the first question
-      });
-    }
-  }
+  // Call the main function when the page loads
   main();
 })();
