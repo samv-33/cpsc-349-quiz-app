@@ -25,18 +25,22 @@
   }
 
   function startTimer(duration, display) {
+    //display.timerInterval
+    clearInterval(window.timerInterval); //clears any existing timer
     let timer = duration;
-    const timerInterval = setInterval(function () {
+    //const display.timerInterval was before
+    window.timerInterval = setInterval(function () {
       display.textContent = timer;
       if (--timer < 0) {
-        clearInterval(timerInterval); // Stop the timer
+        clearInterval(window.timerInterval); // Stop the timer
         timer = 0; // Ensure the timer display shows 0
 
         // Highlight all options in red
         const options = document.getElementById("options");
         const buttons = options.getElementsByTagName("button");
         for (let button of buttons) {
-          button.style.backgroundColor = "red";
+         // button.style.backgroundColor = "red";
+         //I think we just need to disable it
           button.disabled = true; // Disable all options
         }
       }
@@ -127,7 +131,7 @@
       });
     }
 
-    // Highlight all options in red
+    /*// Highlight all options in red
     const options = document.getElementById("options");
     const buttons = options.getElementsByTagName("button");
     for (let button of buttons) {
@@ -135,7 +139,15 @@
       button.disabled = true; // Disable all options
     }
 
-    addNextButtonHandler();
+    *///addNextButtonHandler();
+    const skipButton = document.getElementById("skipButton");
+    const nextButton = document.getElementById("nextButton");
+
+    // Hide next button
+    nextButton.style.display = "none";
+    // Display skip button and change text back to "skip"
+    skipButton.style.display = "block";
+    skipButton.textContent = "skip";
 
     if (currentQuestionIndex < quizData.length - 1) {
       currentQuestionIndex++;
@@ -186,6 +198,16 @@
 
     // Set optionSelected flag to true
     optionSelected = true;
+
+    const skipButton = document.getElementById("skipButton");
+    const nextButton = document.getElementById("nextButton");
+
+    //Hide skip button
+    skipButton.style.display = "none";
+    //Display Next button
+    nextButton.style.display = "block";
+    nextButton.textContent = "Next";
+
   }
 
   function addSkipButtonHandler() {

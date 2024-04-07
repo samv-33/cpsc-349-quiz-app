@@ -60,3 +60,11 @@ body {
   height: auto;
   width: 350px;
 }
+
+#skipButton{
+  display: block;
+}
+
+#nextButton{
+  display: none;
+}
