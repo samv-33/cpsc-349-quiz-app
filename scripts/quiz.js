@@ -1,7 +1,7 @@
 (function () {
   let userScore = 0;
   let totalQuestions = 0;
-  let quizResults = [];
+  let quizResults = []; // Removed initialization here
   let currentQuestionIndex = 0;
   let quizData;
 
@@ -40,44 +40,30 @@
         const buttons = options.getElementsByTagName("button");
 
         for (let button of buttons) {
-         // button.style.backgroundColor = "red";
-         //I think we just need to disable it
           button.disabled = true; // Disable all options
         }
 
-         //shows answer if nothing is selected when timer is out
-         const correctAnswer = quizData[currentQuestionIndex].answer;
-         for (let button of buttons) {
+        //shows answer if nothing is selected when timer is out
+        const correctAnswer = quizData[currentQuestionIndex].answer;
+        for (let button of buttons) {
           if (button.textContent === correctAnswer) {
-              button.style.backgroundColor = "green";
-              break; // Exit loop after finding correct answer
+            button.style.backgroundColor = "green";
+            break; // Exit loop after finding correct answer
           }
-      }
+        }
 
-          //Hide skip button
-          skipButton.style.display = "none";
-          //Display Next button
-          nextButton.style.display = "block";
-          nextButton.textContent = "Next";
-          //set flag for options to true, so it can move to next question
-          if(!optionSelected){
-            optionSelected = true;
-            addNextButtonHandler();
-          }
+        //Hide skip button
+        skipButton.style.display = "none";
+        //Display Next button
+        nextButton.style.display = "block";
+        nextButton.textContent = "Next";
+        //set flag for options to true, so it can move to next question
+        if (!optionSelected) {
+          optionSelected = true;
+          addNextButtonHandler();
+        }
       }
     }, 1000); // Update every second
-  }
-
-  function addNextButtonHandler() {
-    const nextButton = document.getElementById("nextButton");
-    nextButton.addEventListener("click", function () {
-      if (optionSelected) {
-        // Move to next question only if an option has been selected
-        const question = quizData[currentQuestionIndex];
-        moveToNextQuestion(question, null, false);
-        optionSelected = false; // Reset optionSelected flag
-      }
-    });
   }
 
   function displayQuestion() {
@@ -120,9 +106,6 @@
     const duration = 15; // 15 seconds for each question
 
     startTimer(duration, timerDisplay);
-    const skipButton = document.getElementById("skipButton");
-    const nextButton = document.getElementById("nextButton");
-   
   }
 
   function redirectToQuizComplete() {
@@ -147,23 +130,15 @@
   function moveToNextQuestion(question, option, correct) {
     // Mark the question as incorrect if not already marked as correct
     if (!correct) {
-      quizResults.push({
+      quizResults[currentQuestionIndex] = {
+        // Update existing object
         question: question.question,
         selectedOption: option,
         correctOption: question.answer,
         correct: correct,
-      });
+      };
     }
 
-    /*// Highlight all options in red
-    const options = document.getElementById("options");
-    const buttons = options.getElementsByTagName("button");
-    for (let button of buttons) {
-      button.style.backgroundColor = "red";
-      button.disabled = true; // Disable all options
-    }
-
-    *///addNextButtonHandler();
     const skipButton = document.getElementById("skipButton");
     const nextButton = document.getElementById("nextButton");
 
@@ -186,6 +161,8 @@
   let optionSelected = false; // Flag to track if an option has been selected
 
   function selectOption(option) {
+    console.log(currentQuestionIndex); // needed for testing
+
     const question = quizData[currentQuestionIndex];
     let correct = false;
 
@@ -209,15 +186,27 @@
       }
     }
 
-     // If the selected option is wrong, highlight the correct answer in green
-     if (!correct) {
+    // Ensure quizResults array is initialized with enough space
+    while (quizResults.length <= currentQuestionIndex) {
+      quizResults.push({});
+    }
+
+    // Set the selected option and mark the question as correct or incorrect in quizResults
+    quizResults[currentQuestionIndex] = {
+      question: question.question,
+      selectedOption: option,
+      correctOption: question.answer,
+      correct: correct,
+    };
+
+    // If the selected option is wrong, highlight the correct answer in green
+    if (!correct) {
       for (let button of buttons) {
-          if (button.textContent === question.answer) {
-              button.style.backgroundColor = "green";
-              break; // Break out of the loop once the correct answer is found
-          
-            }
+        if (button.textContent === question.answer) {
+          button.style.backgroundColor = "green";
+          break; // Break out of the loop once the correct answer is found
         }
+      }
     }
 
     // Set optionSelected flag to true
@@ -232,6 +221,8 @@
     nextButton.style.display = "block";
     nextButton.textContent = "Next";
 
+    // Pass the selected option and correctness to moveToNextQuestion
+    moveToNextQuestion(question, option, correct);
   }
 
   function addSkipButtonHandler() {
@@ -239,7 +230,7 @@
     skipButton.addEventListener("click", function () {
       const question = quizData[currentQuestionIndex];
 
-      moveToNextQuestion(question, null, false);
+      moveToNextQuestion(question, option, correct);
     });
   }
   function addNextButtonHandler() {
@@ -263,6 +254,7 @@
       loadQuizData(quizName).then((data) => {
         quizData = data.questions;
         totalQuestions = quizData.length; // Set total number of questions
+        quizResults = new Array(totalQuestions).fill({}); // Initialize quizResults array here
         displayQuestion(); // Display the first question
       });
     }
