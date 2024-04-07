@@ -39,5 +39,18 @@
     });
   }
 
-  displayResults();
+  function clearHistory() {
+    localStorage.removeItem("allQuizResults");
+    location.reload();
+  }
+
+  function main() {
+    const clearHistoryButton = document.getElementById("clearHistory");
+    clearHistoryButton.addEventListener("click", function () {
+      clearHistory();
+    });
+    displayResults();
+  }
+
+  main();
 })();
