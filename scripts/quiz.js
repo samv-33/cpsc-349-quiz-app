@@ -54,7 +54,7 @@
     }
 
     // Update quiz title and question
-    quizTitle.textContent = `Quiz ${getQueryParam("quiz")}`;
+    quizTitle.textContent = `Quiz Topic: ${getQueryParam("quiz")}`;
     questionText.textContent = quizData[currentQuestionIndex].question;
     options.innerHTML = "";
 
