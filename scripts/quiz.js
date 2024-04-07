@@ -80,6 +80,8 @@
     });
   }
 
+ 
+
   function displayQuestion() {
     if (!quizData || quizData.length <= currentQuestionIndex) {
       console.log("No more questions or quiz data not loaded.");
@@ -120,8 +122,6 @@
     const duration = 15; // 15 seconds for each question
 
     startTimer(duration, timerDisplay);
-    const skipButton = document.getElementById("skipButton");
-    const nextButton = document.getElementById("nextButton");
    
   }
 
