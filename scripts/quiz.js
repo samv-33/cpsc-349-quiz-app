@@ -75,7 +75,7 @@
     }
 
     // Update quiz title and question
-    quizTitle.textContent = `Quiz ${getQueryParam("quiz")}`;
+    quizTitle.textContent = `Quiz Topic: ${getQueryParam("quiz")}`;
     questionText.textContent = quizData[currentQuestionIndex].question;
     options.innerHTML = "";
 
@@ -171,6 +171,17 @@
       } else {
         button.disabled = true; // Disable other options after selecting one
       }
+    }
+
+     // If the selected option is wrong, highlight the correct answer in green
+     if (!correct) {
+      for (let button of buttons) {
+          if (button.textContent === question.answer) {
+              button.style.backgroundColor = "green";
+              break; // Break out of the loop once the correct answer is found
+          
+            }
+        }
     }
 
     // Set optionSelected flag to true

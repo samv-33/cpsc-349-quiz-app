@@ -20,6 +20,6 @@ To navigate the app, you can click on the buttons on the home page to start the 
 
 ## Authors
 
-Nadeem Maida
-Sam Vo
+Nadeem Maida,
+Samuel Vo,
 Karson Lant

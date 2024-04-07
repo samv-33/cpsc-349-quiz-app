@@ -2,6 +2,14 @@ body{
     background-color: hsl(270, 100%, 30%);
 }
 
+h1{
+    color: #fff;
+}
+
+.btn{
+    margin-top: 10px;;
+}
+
 .history-container {
     margin-top: 20px;
 }
