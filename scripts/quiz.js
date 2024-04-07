@@ -38,11 +38,22 @@
         // Highlight all options in red
         const options = document.getElementById("options");
         const buttons = options.getElementsByTagName("button");
+
         for (let button of buttons) {
          // button.style.backgroundColor = "red";
          //I think we just need to disable it
           button.disabled = true; // Disable all options
         }
+
+         //shows answer if nothing is selected when timer is out
+         const correctAnswer = quizData[currentQuestionIndex].answer;
+         for (let button of buttons) {
+          if (button.textContent === correctAnswer) {
+              button.style.backgroundColor = "green";
+              break; // Exit loop after finding correct answer
+          }
+      }
+
           //Hide skip button
           skipButton.style.display = "none";
           //Display Next button
