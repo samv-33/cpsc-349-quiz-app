@@ -10,7 +10,7 @@
   const quizResults = JSON.parse(localStorage.getItem("recentQuizResults"));
   console.log(quizResults);
 
-  function displayFeedback() {
+  function displayFeedback(quizResults) {
     const feedbackList = document.getElementById("feedbackList");
     feedbackList.innerHTML = "";
     quizResults.forEach((result, index) => {

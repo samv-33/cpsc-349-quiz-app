@@ -26,12 +26,33 @@
 
   function startTimer(duration, display) {
     let timer = duration;
-    setInterval(function () {
+    const timerInterval = setInterval(function () {
       display.textContent = timer;
       if (--timer < 0) {
-        timer = 0;
+        clearInterval(timerInterval); // Stop the timer
+        timer = 0; // Ensure the timer display shows 0
+
+        // Highlight all options in red
+        const options = document.getElementById("options");
+        const buttons = options.getElementsByTagName("button");
+        for (let button of buttons) {
+          button.style.backgroundColor = "red";
+          button.disabled = true; // Disable all options
+        }
       }
     }, 1000); // Update every second
+  }
+
+  function addNextButtonHandler() {
+    const nextButton = document.getElementById("nextButton");
+    nextButton.addEventListener("click", function () {
+      if (optionSelected) {
+        // Move to next question only if an option has been selected
+        const question = quizData[currentQuestionIndex];
+        moveToNextQuestion(question, null, false);
+        optionSelected = false; // Reset optionSelected flag
+      }
+    });
   }
 
   function displayQuestion() {
@@ -96,12 +117,25 @@
   }
 
   function moveToNextQuestion(question, option, correct) {
-    quizResults.push({
-      question: question.question,
-      selectedOption: option,
-      correctOption: question.answer,
-      correct: correct,
-    });
+    // Mark the question as incorrect if not already marked as correct
+    if (!correct) {
+      quizResults.push({
+        question: question.question,
+        selectedOption: option,
+        correctOption: question.answer,
+        correct: correct,
+      });
+    }
+
+    // Highlight all options in red
+    const options = document.getElementById("options");
+    const buttons = options.getElementsByTagName("button");
+    for (let button of buttons) {
+      button.style.backgroundColor = "red";
+      button.disabled = true; // Disable all options
+    }
+
+    addNextButtonHandler();
 
     if (currentQuestionIndex < quizData.length - 1) {
       currentQuestionIndex++;
