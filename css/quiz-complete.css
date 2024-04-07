@@ -20,3 +20,28 @@ body {
 #scoreParagraph {
   font-size: 24px;
 }
+
+.question-info {
+  border: 2px solid #070000;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.question-info p {
+  margin: 0;
+}
+
+.question-info p:nth-child(2),
+.question-info p:nth-child(3) {
+  margin-top: 5px;
+}
+
+.question-info p:first-child {
+  font-weight: bold;
+}
+
+.question-info p:nth-child(2),
+.question-info p:nth-child(3) {
+  margin-left: 20px;
+}

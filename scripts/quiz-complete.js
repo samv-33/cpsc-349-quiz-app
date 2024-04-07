@@ -16,12 +16,31 @@
     feedbackList.innerHTML = "";
 
     quizResults.forEach((result, index) => {
-      const listItem = document.createElement("li");
-      listItem.textContent = `Question ${index + 1}: 
-        Your answer: ${result.selectedOption || "Not answered"} 
-        | Correct answer: ${result.correctOption}`;
-      listItem.style.color = result.correct ? "green" : "red";
-      feedbackList.appendChild(listItem);
+      const questionInfo = document.createElement("div");
+      questionInfo.classList.add("question-info");
+
+      // Create elements for question, selected option, and correct option
+      const question = document.createElement("p");
+      question.textContent = `Question ${index + 1}: ${result.question}`;
+      const selectedOption = document.createElement("p");
+      selectedOption.textContent = `Your answer: ${
+        result.selectedOption || "Not answered"
+      }`;
+      const correctOption = document.createElement("p");
+      correctOption.textContent = `Correct answer: ${result.correctOption}`;
+
+      // Set color based on correctness
+      question.style.color = result.correct ? "green" : "red";
+      selectedOption.style.color = result.correct ? "green" : "red";
+      correctOption.style.color = "green"; // Correct answer always in green
+
+      // Append elements to questionInfo
+      questionInfo.appendChild(question);
+      questionInfo.appendChild(selectedOption);
+      questionInfo.appendChild(correctOption);
+
+      // Append questionInfo to feedbackList
+      feedbackList.appendChild(questionInfo);
     });
   }
 
