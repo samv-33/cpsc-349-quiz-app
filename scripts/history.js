@@ -1,7 +1,8 @@
 (function () {
   function displayResults() {
     const resultsElement = document.getElementById("historyContainer");
-    const storedResults = JSON.parse(localStorage.getItem("allQuizResults")) || [];
+    const storedResults =
+      JSON.parse(localStorage.getItem("allQuizResults")) || [];
 
     console.log("Stored results:", storedResults);
 
@@ -13,9 +14,13 @@
 
       const quizTitle = document.createElement("h4");
       quizTitle.className = "card-title";
-      quizTitle.textContent = `Quiz Name: ${result.quiz} - Score: ${result.score}/${
-        result.totalQuestions
-      } - Completed: ${new Date(result.timestamp).toLocaleString()}`;
+
+      // Check if the timestamp is valid
+      const completedDate = result.timestamp
+        ? new Date(result.timestamp).toLocaleString()
+        : "N/A";
+
+      quizTitle.textContent = `Quiz Name: ${result.quiz} - Score: ${result.score}/${result.totalQuestions} - Completed: ${completedDate}`;
       cardBody.appendChild(quizTitle);
 
       const listGroup = document.createElement("ul");
