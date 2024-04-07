@@ -43,6 +43,16 @@
          //I think we just need to disable it
           button.disabled = true; // Disable all options
         }
+          //Hide skip button
+          skipButton.style.display = "none";
+          //Display Next button
+          nextButton.style.display = "block";
+          nextButton.textContent = "Next";
+          //set flag for options to true, so it can move to next question
+          if(!optionSelected){
+            optionSelected = true;
+            addNextButtonHandler();
+          }
       }
     }, 1000); // Update every second
   }
@@ -99,6 +109,9 @@
     const duration = 15; // 15 seconds for each question
 
     startTimer(duration, timerDisplay);
+    const skipButton = document.getElementById("skipButton");
+    const nextButton = document.getElementById("nextButton");
+   
   }
 
   function redirectToQuizComplete() {
