@@ -4,6 +4,7 @@
   let quizResults = [];
   let currentQuestionIndex = 0;
   let quizData;
+  let selectedOption; // Variable to store the selected option
 
   // Function to get query parameter for quiz number
   function getQueryParam(param) {
@@ -71,19 +72,18 @@
   function addNextButtonHandler() {
     const nextButton = document.getElementById("nextButton");
     nextButton.addEventListener("click", function () {
-      if (optionSelected) {
+      if (selectedOption) {
+        // Use selectedOption here instead of optionSelected
         // Move to next question only if an option has been selected
         const question = quizData[currentQuestionIndex];
-        moveToNextQuestion(question, null, false);
-        optionSelected = false; // Reset optionSelected flag
+        const correctAnswer = question.answer;
+        const correct = selectedOption === correctAnswer;
+        moveToNextQuestion(question, selectedOption, correct);
+        selectedOption = null; // Reset selectedOption
       }
     });
   }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 1b08337c8a3119ce058f24ef290a3668fe578f54
   function displayQuestion() {
     if (!quizData || quizData.length <= currentQuestionIndex) {
       console.log("No more questions or quiz data not loaded.");
@@ -150,63 +150,30 @@
   }
 
   function moveToNextQuestion(question, option, correct) {
-     // Check if an option was selected
-     const optionSelected = option !== null;
+    // Check if an option was selected
+    const optionSelected = option !== null;
 
-     // Update quiz results based on whether an option was selected
-     //if (optionSelected && option === question.answer) {
-     //        console.log("Correct!");
-     //        userScore++;
-     //        correct = true;
-     //    } else if(optionSelected && option !== question.answer)
-     //    {
-     //        console.log("Wrong!");
-     //    }
- 
-         // Record the selected option in quiz results
-         if(optionSelected){
-         quizResults.push({
-             question: question.question,
-             selectedOption: option,
-             correctOption: question.answer,
-             correct: correct || false,
-         });
+    console.log(option);
+    console.log(correct);
 
-     } else {
-         // If no option was selected, mark the question as not answered
-         quizResults.push({
-             question: question.question,
-             selectedOption: null,
-             correctOption: question.answer,
-             correct: false,
-         });
-     }
- 
-    // Mark the question as incorrect if not already marked as correct
-    //if (!correct) {
-    //  quizResults.push({
-    //    question: question.question,
-    //    selectedOption: option,
-    //    correctOption: question.answer,
-    //    correct: correct,
-    //  });
-    //}
-
-    /*// Highlight all options in red
-    const options = document.getElementById("options");
-    const buttons = options.getElementsByTagName("button");
-    for (let button of buttons) {
-      button.style.backgroundColor = "red";
-      button.disabled = true; // Disable all options
+    // Record the selected option in quiz results
+    if (optionSelected) {
+      quizResults.push({
+        question: question.question,
+        selectedOption: option,
+        correctOption: question.answer,
+        correct: correct || false,
+      });
+    } else {
+      // If no option was selected, mark the question as not answered
+      quizResults.push({
+        question: question.question,
+        selectedOption: null,
+        correctOption: question.answer,
+        correct: false,
+      });
     }
 
-<<<<<<< HEAD
-    *///addNextButtonHandler();
-    console.log("Selected Option:", option); 
-
-=======
-    */ //addNextButtonHandler();
->>>>>>> 1b08337c8a3119ce058f24ef290a3668fe578f54
     const skipButton = document.getElementById("skipButton");
     const nextButton = document.getElementById("nextButton");
 
@@ -225,8 +192,6 @@
       redirectToQuizComplete();
     }
   }
-
-  let optionSelected = false; // Flag to track if an option has been selected
 
   function selectOption(option) {
     const question = quizData[currentQuestionIndex];
@@ -262,8 +227,8 @@
       }
     }
 
-    // Set optionSelected flag to true
-    optionSelected = true;
+    // Set selectedOption variable to the selected option
+    selectedOption = option;
 
     const skipButton = document.getElementById("skipButton");
     const nextButton = document.getElementById("nextButton");
@@ -281,17 +246,6 @@
       const question = quizData[currentQuestionIndex];
 
       moveToNextQuestion(question, null, false);
-    });
-  }
-  function addNextButtonHandler() {
-    const nextButton = document.getElementById("nextButton");
-    nextButton.addEventListener("click", function () {
-      if (optionSelected) {
-        // Move to next question only if an option has been selected
-        const question = quizData[currentQuestionIndex];
-        moveToNextQuestion(question, null, false);
-        optionSelected = false; // Reset optionSelected flag
-      }
     });
   }
 
