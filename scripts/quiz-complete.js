@@ -23,9 +23,7 @@
       const question = document.createElement("p");
       question.textContent = `Question ${index + 1}: ${result.question}`;
       const selectedOption = document.createElement("p");
-      selectedOption.textContent = `Your answer: ${
-        result.selectedOption || "Not answered"
-      }`;
+      selectedOption.textContent = `Your answer: ${result.selectedOption || "Not answered"}`;
       const correctOption = document.createElement("p");
       correctOption.textContent = `Correct answer: ${result.correctOption}`;
 

@@ -80,7 +80,6 @@
     });
   }
 
- 
 
   function displayQuestion() {
     if (!quizData || quizData.length <= currentQuestionIndex) {
@@ -149,15 +148,47 @@
   }
 
   function moveToNextQuestion(question, option, correct) {
+     // Check if an option was selected
+     const optionSelected = option !== null;
+
+     // Update quiz results based on whether an option was selected
+     //if (optionSelected && option === question.answer) {
+     //        console.log("Correct!");
+     //        userScore++;
+     //        correct = true;
+     //    } else if(optionSelected && option !== question.answer)
+     //    {
+     //        console.log("Wrong!");
+     //    }
+ 
+         // Record the selected option in quiz results
+         if(optionSelected){
+         quizResults.push({
+             question: question.question,
+             selectedOption: option,
+             correctOption: question.answer,
+             correct: correct || false,
+         });
+
+     } else {
+         // If no option was selected, mark the question as not answered
+         quizResults.push({
+             question: question.question,
+             selectedOption: null,
+             correctOption: question.answer,
+             correct: false,
+         });
+     }
+ 
     // Mark the question as incorrect if not already marked as correct
-    if (!correct) {
-      quizResults.push({
-        question: question.question,
-        selectedOption: option,
-        correctOption: question.answer,
-        correct: correct,
-      });
-    }
+    //if (!correct) {
+    //  quizResults.push({
+    //    question: question.question,
+    //    selectedOption: option,
+    //    correctOption: question.answer,
+    //    correct: correct,
+    //  });
+    //}
 
     /*// Highlight all options in red
     const options = document.getElementById("options");
@@ -168,6 +199,8 @@
     }
 
     *///addNextButtonHandler();
+    console.log("Selected Option:", option); 
+
     const skipButton = document.getElementById("skipButton");
     const nextButton = document.getElementById("nextButton");
 
