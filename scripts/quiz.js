@@ -128,11 +128,15 @@
   function redirectToQuizComplete() {
     let allQuizResults = localStorage.getItem("allQuizResults");
     allQuizResults = allQuizResults ? JSON.parse(allQuizResults) : [];
+
+    const completionTimestamp = new Date().getTime();
+
     allQuizResults.push({
       quiz: getQueryParam("quiz"),
       questionsAndAnswers: quizResults,
       score: userScore,
       totalQuestions: totalQuestions,
+      timestamp: completionTimestamp, // Store the completion timestamp
     });
 
     // Save quiz results, user score, and total questions to local storage
