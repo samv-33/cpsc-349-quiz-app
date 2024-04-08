@@ -40,30 +40,30 @@
         const buttons = options.getElementsByTagName("button");
 
         for (let button of buttons) {
-         // button.style.backgroundColor = "red";
-         //I think we just need to disable it
+          // button.style.backgroundColor = "red";
+          //I think we just need to disable it
           button.disabled = true; // Disable all options
         }
 
-         //shows answer if nothing is selected when timer is out
-         const correctAnswer = quizData[currentQuestionIndex].answer;
-         for (let button of buttons) {
+        //shows answer if nothing is selected when timer is out
+        const correctAnswer = quizData[currentQuestionIndex].answer;
+        for (let button of buttons) {
           if (button.textContent === correctAnswer) {
-              button.style.backgroundColor = "green";
-              break; // Exit loop after finding correct answer
+            button.style.backgroundColor = "green";
+            break; // Exit loop after finding correct answer
           }
-      }
+        }
 
-          //Hide skip button
-          skipButton.style.display = "none";
-          //Display Next button
-          nextButton.style.display = "block";
-          nextButton.textContent = "Next";
-          //set flag for options to true, so it can move to next question
-          if(!optionSelected){
-            optionSelected = true;
-            addNextButtonHandler();
-          }
+        //Hide skip button
+        skipButton.style.display = "none";
+        //Display Next button
+        nextButton.style.display = "block";
+        nextButton.textContent = "Next";
+        //set flag for options to true, so it can move to next question
+        if (!optionSelected) {
+          optionSelected = true;
+          addNextButtonHandler();
+        }
       }
     }, 1000); // Update every second
   }
@@ -79,8 +79,6 @@
       }
     });
   }
-
- 
 
   function displayQuestion() {
     if (!quizData || quizData.length <= currentQuestionIndex) {
@@ -122,7 +120,6 @@
     const duration = 15; // 15 seconds for each question
 
     startTimer(duration, timerDisplay);
-   
   }
 
   function redirectToQuizComplete() {
@@ -167,7 +164,7 @@
       button.disabled = true; // Disable all options
     }
 
-    *///addNextButtonHandler();
+    */ //addNextButtonHandler();
     const skipButton = document.getElementById("skipButton");
     const nextButton = document.getElementById("nextButton");
 
@@ -213,15 +210,14 @@
       }
     }
 
-     // If the selected option is wrong, highlight the correct answer in green
-     if (!correct) {
+    // If the selected option is wrong, highlight the correct answer in green
+    if (!correct) {
       for (let button of buttons) {
-          if (button.textContent === question.answer) {
-              button.style.backgroundColor = "green";
-              break; // Break out of the loop once the correct answer is found
-          
-            }
+        if (button.textContent === question.answer) {
+          button.style.backgroundColor = "green";
+          break; // Break out of the loop once the correct answer is found
         }
+      }
     }
 
     // Set optionSelected flag to true
@@ -235,7 +231,6 @@
     //Display Next button
     nextButton.style.display = "block";
     nextButton.textContent = "Next";
-
   }
 
   function addSkipButtonHandler() {
