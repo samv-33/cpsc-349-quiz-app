@@ -31,7 +31,8 @@
     intervalId = setInterval(() => {
       if (timeLeft <= 0) {
         clearInterval(intervalId);
-        moveToNextQuestion(quizData[currentQuestionIndex], null, false);
+        let currentQuestion = quizData[currentQuestionIndex];
+        moveToNextQuestion(currentQuestion, null, false);
       } else {
         display.textContent = timeLeft;
         timeLeft--;
@@ -44,7 +45,12 @@
     intervalId = setInterval(() => {
       if (timeLeft <= 0) {
         clearInterval(intervalId);
-        moveToNextQuestion(quizData[currentQuestionIndex], selectedOption, false);
+        let currentQuestion = quizData[currentQuestionIndex];
+        moveToNextQuestion(
+          currentQuestion,
+          selectedOption,
+          currentQuestion.answer === selectedOption
+        );
       } else {
         display.textContent = timeLeft;
         timeLeft--;
