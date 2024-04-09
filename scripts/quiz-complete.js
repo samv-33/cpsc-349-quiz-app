@@ -11,6 +11,7 @@
   const quizResults = JSON.parse(localStorage.getItem("recentQuizResults"));
   console.log(quizResults);
 
+  // Function to display feedback based on quiz results
   function displayFeedback(quizResults) {
     const feedbackList = document.getElementById("feedbackList");
     feedbackList.innerHTML = "";
@@ -23,7 +24,9 @@
       const question = document.createElement("p");
       question.textContent = `Question ${index + 1}: ${result.question}`;
       const selectedOption = document.createElement("p");
-      selectedOption.textContent = `Your answer: ${result.selectedOption || "Not answered"}`;
+      selectedOption.textContent = `Your answer: ${
+        result.selectedOption || "Not answered"
+      }`;
       const correctOption = document.createElement("p");
       correctOption.textContent = `Correct answer: ${result.correctOption}`;
 
@@ -42,7 +45,7 @@
     });
   }
 
-  // Call the main function to set up event handlers
+  // Main function to set up event handlers and initialize page
   function main() {
     const feedbackSection = document.getElementById("feedbackSection");
     feedbackSection.style.display = "block"; // Ensure the feedback section is visible
