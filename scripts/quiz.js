@@ -5,6 +5,7 @@
   let currentQuestionIndex = 0;
   let quizData;
   let selectedOption; // Variable to store the selected option
+  let intervalId;
 
   // Function to get query parameter for quiz number
   function getQueryParam(param) {
@@ -25,48 +26,34 @@
     }
   }
 
-  function startTimer(duration, display) {
-    //display.timerInterval
-    clearInterval(window.timerInterval); //clears any existing timer
-    let timer = duration;
-    //const display.timerInterval was before
-    window.timerInterval = setInterval(function () {
-      display.textContent = timer;
-      if (--timer < 0) {
-        clearInterval(window.timerInterval); // Stop the timer
-        timer = 0; // Ensure the timer display shows 0
-
-        // Highlight all options in red
-        const options = document.getElementById("options");
-        const buttons = options.getElementsByTagName("button");
-
-        for (let button of buttons) {
-          // button.style.backgroundColor = "red";
-          //I think we just need to disable it
-          button.disabled = true; // Disable all options
-        }
-
-        //shows answer if nothing is selected when timer is out
-        const correctAnswer = quizData[currentQuestionIndex].answer;
-        for (let button of buttons) {
-          if (button.textContent === correctAnswer) {
-            button.style.backgroundColor = "green";
-            break; // Exit loop after finding correct answer
-          }
-        }
-
-        //Hide skip button
-        skipButton.style.display = "none";
-        //Display Next button
-        nextButton.style.display = "block";
-        nextButton.textContent = "Next";
-        //set flag for options to true, so it can move to next question
-        if (!optionSelected) {
-          optionSelected = true;
-          addNextButtonHandler();
-        }
+  function questionTimer(display) {
+    let timeLeft = 15;
+    intervalId = setInterval(() => {
+      if (timeLeft <= 0) {
+        clearInterval(intervalId);
+        moveToNextQuestion(quizData[currentQuestionIndex], null, false);
+      } else {
+        display.textContent = timeLeft;
+        timeLeft--;
       }
-    }, 1000); // Update every second
+    }, 1000);
+  }
+
+  function questionAnsweredTimer(display) {
+    let timeLeft = 3;
+    intervalId = setInterval(() => {
+      if (timeLeft <= 0) {
+        clearInterval(intervalId);
+        moveToNextQuestion(quizData[currentQuestionIndex], selectedOption, false);
+      } else {
+        display.textContent = timeLeft;
+        timeLeft--;
+      }
+    }, 1000);
+  }
+
+  function stopTimer() {
+    clearInterval(intervalId);
   }
 
   function addNextButtonHandler() {
@@ -121,9 +108,8 @@
     });
 
     const timerDisplay = document.querySelector(".timeSeconds");
-    const duration = 15; // 15 seconds for each question
 
-    startTimer(duration, timerDisplay);
+    questionTimer(timerDisplay);
   }
 
   function redirectToQuizComplete() {
@@ -183,6 +169,7 @@
     skipButton.style.display = "block";
     skipButton.textContent = "skip";
 
+    stopTimer();
     if (currentQuestionIndex < quizData.length - 1) {
       currentQuestionIndex++;
       displayQuestion();
@@ -238,13 +225,17 @@
     //Display Next button
     nextButton.style.display = "block";
     nextButton.textContent = "Next";
+
+    stopTimer();
+    const timerDisplay = document.querySelector(".timeSeconds");
+    questionAnsweredTimer(timerDisplay);
   }
 
   function addSkipButtonHandler() {
     const skipButton = document.getElementById("skipButton");
     skipButton.addEventListener("click", function () {
       const question = quizData[currentQuestionIndex];
-
+      stopTimer();
       moveToNextQuestion(question, null, false);
     });
   }

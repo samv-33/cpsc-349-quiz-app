@@ -42,20 +42,14 @@
     });
   }
 
-  function addReviewButtonHandler() {
-    const reviewButton = document.getElementById("reviewButton");
-    reviewButton.addEventListener("click", function () {
-      const feedbackSection = document.getElementById("feedbackSection");
-      feedbackSection.style.display = "block"; // Ensure the feedback section is visible
-      const quizResults = JSON.parse(localStorage.getItem("recentQuizResults"));
-      const quizData = JSON.parse(localStorage.getItem("quizData")); // Retrieve quiz data
-      displayFeedback(quizResults, quizData); // Pass both quizResults and quizData to displayFeedback
-    });
-  }
-
   // Call the main function to set up event handlers
   function main() {
-    addReviewButtonHandler();
+    const feedbackSection = document.getElementById("feedbackSection");
+    feedbackSection.style.display = "block"; // Ensure the feedback section is visible
+    const quizResults = JSON.parse(localStorage.getItem("recentQuizResults"));
+    const quizData = JSON.parse(localStorage.getItem("quizData")); // Retrieve quiz data
+
+    displayFeedback(quizResults, quizData);
   }
 
   // Call the main function when the page loads

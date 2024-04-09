@@ -1,8 +1,7 @@
 (function () {
   function displayResults() {
     const resultsElement = document.getElementById("historyContainer");
-    const storedResults =
-      JSON.parse(localStorage.getItem("allQuizResults")) || [];
+    const storedResults = JSON.parse(localStorage.getItem("allQuizResults")) || [];
 
     console.log("Stored results:", storedResults);
 
@@ -16,9 +15,7 @@
       quizTitle.className = "card-title";
 
       // Check if the timestamp is valid
-      const completedDate = result.timestamp
-        ? new Date(result.timestamp).toLocaleString()
-        : "N/A";
+      const completedDate = result.timestamp ? new Date(result.timestamp).toLocaleString() : "N/A";
 
       quizTitle.textContent = `Quiz Name: ${result.quiz} - Score: ${result.score}/${result.totalQuestions} - Completed: ${completedDate}`;
       cardBody.appendChild(quizTitle);
@@ -28,7 +25,9 @@
       result.questionsAndAnswers.forEach((qa) => {
         const listItem = document.createElement("li");
         listItem.className = "list-group-item";
-        listItem.innerHTML = `${qa.question} <br> Selected option: <strong>${qa.selectedOption}</strong>, Correct option: <strong>${qa.correctOption}</strong>`;
+        listItem.innerHTML = `${qa.question} <br> Selected option: <strong>${
+          qa.selectedOption ? qa.selectedOption : "N/A"
+        }</strong>, Correct option: <strong>${qa.correctOption}</strong>`;
 
         if (qa.correct) {
           listItem.classList.add("correct-answer");
