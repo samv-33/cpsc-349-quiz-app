@@ -1,7 +1,9 @@
+/*Styling for the header h1*/
 h1 {
     color: #333;
 }
 
+/*Styling the container that holds the quizzes*/
 .container {
     width: 100%;
     max-width: 690px;
@@ -17,13 +19,15 @@ body {
     background-color: hsl(270, 100%, 30%);
 }
 
+/*Styling applied to each quis*/
 .quiz-selection {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /*create the 2 columns of quizzes*/
+    gap: 40px; /*spacing in between each quiz*/
 }
 
+/*styling for each quiz card*/
 .quiz-card {
     position: relative;
     width: 100%;
@@ -55,11 +59,13 @@ body {
     text-align: center;
 }
 
+/*hover effect on each card*/
 .quiz-card:hover .card-body {
     opacity: 1;
     border-radius: 10px;
 }
 
+/*stying for the view quiz history button*/
 .btn-info {
     margin-top: 20px;
 }

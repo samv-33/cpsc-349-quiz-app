@@ -5,7 +5,7 @@
   let currentQuestionIndex = 0;
   let quizData;
   let selectedOption; // Variable to store the selected option
-  let intervalId;
+  let intervalId; //Variable to set the time interval
 
   // Function to get query parameter for quiz number
   function getQueryParam(param) {
@@ -26,6 +26,7 @@
     }
   }
 
+  //Function for a timer to countdown, skips if the user don't answer before time is up
   function questionTimer(display) {
     let timeLeft = 15;
     intervalId = setInterval(() => {
@@ -39,7 +40,8 @@
       }
     }, 1000);
   }
-
+  
+  //Short countdown to allow users to press the next question
   function questionAnsweredTimer(display) {
     let timeLeft = 3;
     intervalId = setInterval(() => {
